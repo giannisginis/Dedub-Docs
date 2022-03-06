@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>src.models package &mdash; Dedub 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="src.visualization package" href="src.visualization.html" />
+    <link rel="prev" title="src.features package" href="src.features.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Dedub
+          </a>
+              <div class="version">
+                0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commands.html">Dedub - Ads Similarity Network</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Dedub</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="run_create_dataset.html">run_create_dataset module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="run_inference.html">run_inference module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="run_train.html">run_train module</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="src.html">src package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="src.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="src.common.html">src.common package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.data.html">src.data package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.features.html">src.features package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">src.models package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.visualization.html">src.visualization package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.utils.html">src.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="src.html#module-src">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Dedub</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="modules.html">Dedub</a> &raquo;</li>
+          <li><a href="src.html">src package</a> &raquo;</li>
+      <li>src.models package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/src.models.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="src-models-package">
+<h1>src.models package<a class="headerlink" href="#src-models-package" title="Permalink to this headline"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+</section>
+<section id="module-src.models.base_model">
+<span id="src-models-base-model-module"></span><h2>src.models.base_model module<a class="headerlink" href="#module-src.models.base_model" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.models.base_model.BaseModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.models.base_model.</span></span><span class="sig-name descname"><span class="pre">BaseModel</span></span><a class="headerlink" href="#src.models.base_model.BaseModel" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<p>An abstraction class to use as interface for any model classes that do not inherit from keras</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="src.models.base_model.BaseModel.build_model">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build_model</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.models.base_model.BaseModel.build_model" title="Permalink to this definition"></a></dt>
+<dd><p>A method to build the model</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.models.base_model.BaseModel.evaluate">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">evaluate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">evaluation_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.models.base_model.BaseModel.evaluate" title="Permalink to this definition"></a></dt>
+<dd><p>A method to fit the model
+Args:</p>
+<blockquote>
+<div><p>evaluation_data: Evaluation dataset
+batch_size: Batch size</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.models.base_model.BaseModel.forward">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">train_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">validation_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.models.base_model.BaseModel.forward" title="Permalink to this definition"></a></dt>
+<dd><p>A method to fit the model
+Args:</p>
+<blockquote>
+<div><p>train_data: Train dataset
+validation_data: Validation dataset</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.models.base_model.BaseModel.predict">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inference_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.models.base_model.BaseModel.predict" title="Permalink to this definition"></a></dt>
+<dd><p>A method to fit the model
+Args:</p>
+<blockquote>
+<div><p>inference_data: Data to predict</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-src.models.inference">
+<span id="src-models-inference-module"></span><h2>src.models.inference module<a class="headerlink" href="#module-src.models.inference" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.models.inference.DedubInference">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.models.inference.</span></span><span class="sig-name descname"><span class="pre">DedubInference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputs_for_inference</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_to_trained_model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">paths</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title_encoder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_encoder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_modalities</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.models.inference.DedubInference" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Initializes and Builds the network with the corresponding modalities based on the configuration.
+Args:</p>
+<blockquote>
+<div><p>inputs_for_inference: Data generators with data to predict,
+path_to_trained_model: Filepath for the trained model weights,
+paths: A dictionary with all the corresponding directories,
+title_encoder: A dictionary with all the metadata for the title encoder,
+image_encoder: A dictionary with all the metadata for the image encoder,
+network_modalities: A flag that indicates which modalities to use</p>
+</div></blockquote>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>Tuple (the prediction, probability of the prediction)</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="src.models.inference.DedubInference.inference">
+<span class="sig-name descname"><span class="pre">inference</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.models.inference.DedubInference.inference" title="Permalink to this definition"></a></dt>
+<dd><p>Runs the inference</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-src.models.network_orchestrator">
+<span id="src-models-network-orchestrator-module"></span><h2>src.models.network_orchestrator module<a class="headerlink" href="#module-src.models.network_orchestrator" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.models.network_orchestrator.NetworkOrchestrator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.models.network_orchestrator.</span></span><span class="sig-name descname"><span class="pre">NetworkOrchestrator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">paths</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title_encoder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_encoder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_modalities</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">models_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.models.network_orchestrator.NetworkOrchestrator" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Orchestrates the functionalities of the network and chooses the suitable network based on the configuration
+Args:</p>
+<blockquote>
+<div><p>paths: Dict,
+title_encoder: A dictionary with all the metadata for the title encoder,
+image_encoder: A dictionary with all the metadata for the image encoder,
+network_modalities: A flag that indicates which modalities to use
+models_dir: A directory to save the model checkpoints,</p>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="src.models.network_orchestrator.NetworkOrchestrator.evaluate">
+<span class="sig-name descname"><span class="pre">evaluate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.models.network_orchestrator.NetworkOrchestrator.evaluate" title="Permalink to this definition"></a></dt>
+<dd><p>Evaluations of the model - Not implemented yet</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.models.network_orchestrator.NetworkOrchestrator.forward">
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lr_schedule</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#src.models.utils.LRSchedule" title="src.models.utils.LRSchedule"><span class="pre">src.models.utils.LRSchedule</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">train_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">valid_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.array</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_callbacks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'auto'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.models.network_orchestrator.NetworkOrchestrator.forward" title="Permalink to this definition"></a></dt>
+<dd><p>Forward pass of the model
+Args:</p>
+<blockquote>
+<div><p>lr_schedule: Learning scheduler,
+train_data: training data,
+valid_data: validation data,
+labels: labels if the above are not data generators,
+batch_size: batch size,
+use_callbacks: A flag to use the callbacks or not,
+verbose: verbosity,</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.models.network_orchestrator.NetworkOrchestrator.initialize_network">
+<span class="sig-name descname"><span class="pre">initialize_network</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.models.network_orchestrator.NetworkOrchestrator.initialize_network" title="Permalink to this definition"></a></dt>
+<dd><p>Initializes the network based on the chosen Modalities. Bert for text only and
+Bert + Siamese for image and text</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.models.network_orchestrator.NetworkOrchestrator.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.array</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.models.network_orchestrator.NetworkOrchestrator.predict" title="Permalink to this definition"></a></dt>
+<dd><p>Inference-Prediction
+Args:</p>
+<blockquote>
+<div><p>inputs: An array of embeddings</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-src.models.semantic_similarity_networks">
+<span id="src-models-semantic-similarity-networks-module"></span><h2>src.models.semantic_similarity_networks module<a class="headerlink" href="#module-src.models.semantic_similarity_networks" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.models.semantic_similarity_networks.BertBasedUncased">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.models.semantic_similarity_networks.</span></span><span class="sig-name descname"><span class="pre">BertBasedUncased</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">log_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_dim</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_bert_trainable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="k"><span class="pre">False</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dropout_prob</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lstm_dim</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lstm_activation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dim</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loss_function</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epochs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metrics</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimizer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AnyStr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">learning_rate_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">models_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_multiprocessing</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">workers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.models.semantic_similarity_networks.BertBasedUncased" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#src.models.base_model.BaseModel" title="src.models.base_model.BaseModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.models.base_model.BaseModel</span></code></a></p>
+<p>semantic similarity Network with Transformers (BERT)</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>log_dir: Directory for tensorboard logs if callback is used,
+input_dim: int,
+is_bert_trainable: A flag which indicates if the bert layer is going to be trained,
+dropout_prob: Dropout probability,
+lstm_dim: Lstm Dimension,
+lstm_activation: Lstm Activation,
+output_dim: int,
+loss_function: Loss function,
+epochs: Number of epochs,
+metrics: A list of metrics,
+optimizer: A keras optimizer,
+learning_rate_params: A dictionary with the corresponding params of the lr scheduler,
+models_dir: A directory to save model checkpoints,
+use_multiprocessing: Multiprocessing during forward,
+workers: Workers during forward</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="src.models.semantic_similarity_networks.BertBasedUncased.build_model">
+<span class="sig-name descname"><span class="pre">build_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">as_encoder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.models.semantic_similarity_networks.BertBasedUncased.build_model" title="Permalink to this definition"></a></dt>
+<dd><p>Builds the layers of the model. If as_encoder is True then it skips the last layer and using it
+as feature extractor</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Args:</dt><dd><p>as_encoder: A flag which indicates if it is going to run as encoder and not as classification network</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.models.semantic_similarity_networks.BertBasedUncased.evaluate">
+<span class="sig-name descname"><span class="pre">evaluate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">evaluation_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="src.data.generators.html#src.data.generators.text_data_generators.BertSemanticDataGenerator" title="src.data.generators.text_data_generators.BertSemanticDataGenerator"><span class="pre">src.data.generators.text_data_generators.BertSemanticDataGenerator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.models.semantic_similarity_networks.BertBasedUncased.evaluate" title="Permalink to this definition"></a></dt>
+<dd><p>A method to fit the model
+Args:</p>
+<blockquote>
+<div><p>evaluation_data: Evaluation dataset
+batch_size: Batch size</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.models.semantic_similarity_networks.BertBasedUncased.forward">
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">train_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="src.data.generators.html#src.data.generators.text_data_generators.BertSemanticDataGenerator" title="src.data.generators.text_data_generators.BertSemanticDataGenerator"><span class="pre">src.data.generators.text_data_generators.BertSemanticDataGenerator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">validation_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="src.data.generators.html#src.data.generators.text_data_generators.BertSemanticDataGenerator" title="src.data.generators.text_data_generators.BertSemanticDataGenerator"><span class="pre">src.data.generators.text_data_generators.BertSemanticDataGenerator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_encoder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_callbacks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'auto'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.models.semantic_similarity_networks.BertBasedUncased.forward" title="Permalink to this definition"></a></dt>
+<dd><p>Forward pass of the model
+Args:</p>
+<blockquote>
+<div><p>train_data: training data,
+validation_data: validation data,
+as_encoder: Runs as encoder,
+use_callbacks: A flag to use the callbacks or not,
+verbose: verbosity,</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.models.semantic_similarity_networks.BertBasedUncased.load_weights">
+<span class="sig-name descname"><span class="pre">load_weights</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trained_model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.models.semantic_similarity_networks.BertBasedUncased.load_weights" title="Permalink to this definition"></a></dt>
+<dd><p>Loads weights from a checkpoint.
+Args:</p>
+<blockquote>
+<div><p>trained_model: Path to trained weights</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.models.semantic_similarity_networks.BertBasedUncased.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inference_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="src.data.generators.html#src.data.generators.text_data_generators.BertSemanticDataGenerator" title="src.data.generators.text_data_generators.BertSemanticDataGenerator"><span class="pre">src.data.generators.text_data_generators.BertSemanticDataGenerator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.models.semantic_similarity_networks.BertBasedUncased.predict" title="Permalink to this definition"></a></dt>
+<dd><p>Inference-Prediction
+Args:</p>
+<blockquote>
+<div><p>inference_data: An array with data embeddings,
+batch_size: Batch size,
+verbose: verbosity,</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-src.models.siamese_network">
+<span id="src-models-siamese-network-module"></span><h2>src.models.siamese_network module<a class="headerlink" href="#module-src.models.siamese_network" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.models.siamese_network.CustomModelCheckPoint">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.models.siamese_network.</span></span><span class="sig-name descname"><span class="pre">CustomModelCheckPoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.models.siamese_network.CustomModelCheckPoint" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">keras.callbacks.Callback</span></code></p>
+<p>Stop training when the loss is at its min, i.e. the loss stops decreasing.</p>
+<dl class="simple">
+<dt>Arguments:</dt><dd><p>filepath: filepath of the trained model.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="src.models.siamese_network.CustomModelCheckPoint.on_epoch_end">
+<span class="sig-name descname"><span class="pre">on_epoch_end</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">epoch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.models.siamese_network.CustomModelCheckPoint.on_epoch_end" title="Permalink to this definition"></a></dt>
+<dd><p>Handles the saving of the checkpoint
+Args:</p>
+<blockquote>
+<div><p>epoch: The current epoch
+logs: logs</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.models.siamese_network.CustomModelCheckPoint.on_train_begin">
+<span class="sig-name descname"><span class="pre">on_train_begin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.models.siamese_network.CustomModelCheckPoint.on_train_begin" title="Permalink to this definition"></a></dt>
+<dd><p>Initialize the best as infinity.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="src.models.siamese_network.SiameseNetwork">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.models.siamese_network.</span></span><span class="sig-name descname"><span class="pre">SiameseNetwork</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.models.siamese_network.SiameseNetwork" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">keras.engine.training.Model</span></code></p>
+<p>Siamese Network - shared weights between two sister networks</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>image_shape: Image input size,
+output_dim: The dimension of the predicted distances,
+loss_function: Loss function,
+dropout_prob_enet: Dropoout probability,
+include_top_enet: A flag to include the top linear layers of enet,
+enet_weights: A flag to define the pretrained weights,
+is_efficient_net_trainable: A flag to use enet as pre-trained layer,
+metrics: A list of metrics,
+optimizer: A keras optimizer,
+loss_function: The loss function,
+learning_rate_params: A dictionary with the corresponding params of the lr scheduler,
+models_dir: A directory to save model checkpoints,
+use_text_encoder: A flag which indicated the use of text modalities or not,
+text_encoder: Metadata for the text encoder</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="src.models.siamese_network.SiameseNetwork.call">
+<span class="sig-name descname"><span class="pre">call</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">training_inputs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.models.siamese_network.SiameseNetwork.call" title="Permalink to this definition"></a></dt>
+<dd><p>Builds the model</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.models.siamese_network.SiameseNetwork.loss">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">loss</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">margin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.models.siamese_network.SiameseNetwork.loss" title="Permalink to this definition"></a></dt>
+<dd><p>Provides ‘constrastive_loss’ an enclosing scope with variable ‘margin’.</p>
+<dl class="simple">
+<dt>Arguments:</dt><dd><dl class="simple">
+<dt>margin: Integer, defines the baseline for distance for which pairs</dt><dd><p>should be classified as dissimilar. - (default is 1).</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><p>‘constrastive_loss’ function with data (‘margin’) attached.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="src.models.siamese_network.SiameseNetwork.loss_function">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">loss_function</span></span><a class="headerlink" href="#src.models.siamese_network.SiameseNetwork.loss_function" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the models’ loss function</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.models.siamese_network.SiameseNetwork.lr_schedule">
+<span class="sig-name descname"><span class="pre">lr_schedule</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.models.siamese_network.SiameseNetwork.lr_schedule" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="src.models.siamese_network.SiameseNetwork.model_metrics">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">model_metrics</span></span><a class="headerlink" href="#src.models.siamese_network.SiameseNetwork.model_metrics" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the models metrics</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="src.models.siamese_network.SiameseNetwork.model_optimizer">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">model_optimizer</span></span><a class="headerlink" href="#src.models.siamese_network.SiameseNetwork.model_optimizer" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the models optimizer</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-src.models.utils">
+<span id="src-models-utils-module"></span><h2>src.models.utils module<a class="headerlink" href="#module-src.models.utils" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.models.utils.LRSchedule">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.models.utils.</span></span><span class="sig-name descname"><span class="pre">LRSchedule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">post_warmup_learning_rate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">warmup_steps</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.models.utils.LRSchedule" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">keras.optimizer_v2.learning_rate_schedule.LearningRateSchedule</span></code></p>
+<dl class="simple">
+<dt>Learning Rate Scheduler for the optimizer</dt><dd><dl class="simple">
+<dt>Args:</dt><dd><p>post_warmup_learning_rate: Initial learning rate
+warmup_steps: warmup steps of learning rate decay</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="src.models.utils.LRSchedule.get_config">
+<span class="sig-name descname"><span class="pre">get_config</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.models.utils.LRSchedule.get_config" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a configuration of the scheduler</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-src.models">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-src.models" title="Permalink to this headline"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="src.features.html" class="btn btn-neutral float-left" title="src.features package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="src.visualization.html" class="btn btn-neutral float-right" title="src.visualization package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
